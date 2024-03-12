@@ -5,8 +5,8 @@ html, body {
     font-family: "Poppins", sans-serif;
 }
 .wrapper {
-    background-color: white;
-    border-bottom: 1px solid seashell;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid #387ADf;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -19,20 +19,29 @@ html, body {
     gap: 8px;
     align-items: center;
 }
+.logo strong {
+    color: #387ADF;
+}
 .logo p {
     font-size: 32px;
+    color: #20275d;
 }
 .logo img {
     height: 56px;
+
 }
 a {
     font-size: 18px;
-    color: black;
+    color: #20275d;
     opacity: 1;
     margin-left: 24px;
     font-weight: 400;
     font-style: normal;
     text-decoration: none;
+    transition: color 1s ease-in 0;
+}
+a:hover {
+    color: #2a64bd;
 }
 .mobile-wrapper {
     display: none;
@@ -41,7 +50,7 @@ a {
 
 
 .main-container {
-    background-color: gray;
+    background-color: #387ADF;
     display: flex;
     padding: 32px 24px;
 }
@@ -62,31 +71,41 @@ a {
 
 }
 .white-button {
-    background-color: black;
-    color: white;
+    background-color: #FBA834;
+    color: #35374B;
     padding-bottom: 8px;
     padding-top: 8px;
-    width: 90%;
-    font-size: 24px;
+    width: 60%;
+    font-size: 21px;
     border: none;
-    border-radius: 36px;
+    border-radius: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 1.5s linear 0,5;
 }
+.white-button:hover {
+    background-color: #f7b04c;
+  }
 .banner-img {
     width: 60%;
     height: auto;
+    border-radius: 12px;
 }
 h2 {
     font-size: 56px;
     margin: 0px;
-    font-weight: 600;
+    font-weight: 700;
+    color: #F6F5F5;
 }
 h3 {
     font-size: 24px;
     margin: 0px;
-    font-weight: 400;
+    font-weight: 500;
+    color: #F6F5F5;
+    width: 80%;
 }
 .second-container {
-    background-color: white;
+    background-color: #F6F5F5;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -96,14 +115,15 @@ h3 {
     flex-direction: column;
     gap: 32px;
     width: 60%;
-    border-right: 2px solid gray;
+    border-right: 1px solid #387bdf37;
 }
 .information-main {
     width: auto;
     height: auto;
     margin-right: 24px;
-    margin-top: 32px;
+    margin-top: 24px;
     margin-left: 24px;
+    border-radius: 12px;
 }
 .info-content {
     gap: 24px;
@@ -113,56 +133,83 @@ h3 {
 }
 .info-content h4 {
     font-weight: 400;
+    color: #35374B;
+}
+.info-content h3 {
+    color: #20275d;
 }
 .content-1 {
     display: flex;
     flex-direction: row;
     gap: 24px;
     align-items: center;
-    border-bottom: 2px solid gray;
+    background-color: #F6F5F5;
+    transition: background-color 1.5s linear 0,5;
+    border-bottom: 1px solid #387bdf37;
+}
+.content-1:hover {
+    background-color: #f7b04c2f;
 }
 .desktop-img {
     width: 35%;
     height: auto;    
     margin-left: 16px;
-    margin-top: 32px;
-    margin-bottom: 16px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    border-radius: 12px;
+
 }
 .mobile-img {
     display: none;
     width: 100vw;
+    border-radius: 12px;
 }
 .text-1 a {
     margin-left: 0px;
     font-size: 16px;
-    color: blue;
+    color: #387ADf;
     padding-bottom: 8px;
+    transition: color 1s ease-in 0;
+}
+.text-1 a:hover {
+    color: #2a64bd;
 }
 .text-1 h4 {
     margin: 0px;
     font-size: 21px;
     font-weight: 500;
     padding-bottom: 8px;
+    color: #20275d;
 }
 .text-1 p {
     margin: 0px;
     font-size: 16px;
     font-weight: 400;
     padding-bottom: 8px;
+    color: #35374B;
 }
 .content-2 {
     display: flex;
     flex-direction: row;
     gap: 24px;
     align-items: center;
-    border-bottom: 2px solid gray;
+    background-color: #F6F5F5;
+    transition: background-color 1.5s linear 0,5;
+    border-bottom: 1px solid #387bdf37;
 }
-
+.content-2:hover {
+    background-color: #f7b04c2f;   
+}
 .content-3 {
     display: flex;
     flex-direction: row;
     gap: 24px;
     align-items: center;
+    background-color: #F6F5F5;
+    transition: background-color 1.5s linear 0,5;
+}
+.content-3:hover {
+    background-color: #f7b04c2f;
 }
 
 .third-container {
@@ -170,7 +217,7 @@ h3 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: gray;
+    background-color: #387ADF;
 }
 .main-text-2 {
     margin: 32px 0px 16px 0px;
@@ -181,38 +228,95 @@ h3 {
     flex-wrap: wrap;
     margin: 0px 72px 32px 72px;
 }
-.boxes-1, .boxes-2, .boxes-3, .boxes-4, .boxes-5, .boxes-6 {
+.boxes-1 {
+    position: relative;
     width: 26%;
     margin: 16px;
-    background-color: #fff;
+    background-color: #F6F5F5;
+    /* border: 1px solid #F6F5F5 */
     border-radius: 8px;
-    border: 1px solid white;
     padding-bottom: 16px;
-    flex-wrap: wrap;
+    transition: all 0.3s ease;
+}
+.boxes-2 {
+    position: relative;
+    width: 26%;
+    margin: 16px;
+    background-color: #F6F5F5;
+    /* border: 1px solid #F6F5F5 */
+    border-radius: 8px;
+    padding-bottom: 16px;
+    transition: all 0.3s ease;
+}
+.boxes-3 {
+    position: relative;
+    width: 26%;
+    margin: 16px;
+    background-color: #F6F5F5;
+    /* border: 1px solid #F6F5F5 */
+    border-radius: 8px;
+    padding-bottom: 16px;
+    transition: all 0.3s ease;
+}
+.boxes-4 {
+    position: relative;
+    width: 26%;
+    margin: 16px;
+    background-color: #F6F5F5;
+    /* border: 1px solid #F6F5F5 */
+    border-radius: 8px;
+    padding-bottom: 16px;
+    transition: all 0.3s ease;
+}
+.boxes-5 {
+    position: relative;
+    width: 26%;
+    margin: 16px;
+    background-color: #F6F5F5;
+    /* border: 1px solid #F6F5F5 */
+    border-radius: 8px;
+    padding-bottom: 16px;
+    transition: all 0.3s ease;
+}
+.boxes-6 {
+    position: relative;
+    width: 26%;
+    margin: 16px;
+    background-color: #F6F5F5;
+    /* border: 1px solid #F6F5F5 */
+    border-radius: 8px;
+    padding-bottom: 16px;
+    transition: all 0.3s ease;
+}
+.boxes-1:hover, .boxes-2:hover, .boxes-3:hover, .boxes-4:hover, .boxes-5:hover, .boxes-6:hover {
+    transform: scale(1.05);
+    background-color: #ededed;
 }
 .boxes-1 img, .boxes-2 img, .boxes-3 img, .boxes-4 img, .boxes-5 img, .boxes-6 img {
     height: auto;
     width: 100%;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 .third-boxes h3 {
     margin: 8px 16px 0px 16px;
     padding-bottom: 8px;
     padding-top: 8px; 
     font-weight: 600;
+    color: #20275d;
 }
 .third-boxes h4 {
     padding-bottom: 8px;
     padding-top: 8px;
     margin: 8px 16px 0px 16px;
-    color: gray;
+    color: #FBA834;
     font-weight: 400;
 }
 .third-boxes p {
     padding-bottom: 8px;
     padding-top: 8px;
     margin: 8px 16px 0px 16px;
+    color: #35374B;
 }
 .thesis {
     display: flex;
@@ -220,42 +324,76 @@ h3 {
     justify-content: center;
     align-items: center;
     padding: 32px 16px 32px 16px;
-    background-color: #fff;
+    background-color: #F6F5F5;
 }
 .thesis h2 {
     margin-bottom: 32px;
+    color: #387ADF;
 }
 .row {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    gap: 24px;
+    /* gap: 24px */
 }
 .thesis-main {
     width: 60%;
+    padding-right: 24px;
 }
 .thesis video {
     width: 100%;
     margin-bottom: 24px;
+    border-radius: 8px;
+}
+.text h3 {
+    color: #20275d;
+}
+.text h4 {
+    color: #35374B;
+}
+.text p {
+    color: #35374B;
 }
 .thesis aside {
     display: flex;
     flex-direction: column;
     width: 40%;
     border-bottom: none;
+    margin-top: 8px;
 }
-#Fisma, #now-then {
+#Fisma {
     display: flex;
     flex-direction: row;
     align-items: center;
+    border-bottom: 1px solid #387bdf37;
+    border-left: 1px solid #387bdf37;
+    /* border-top: 1px solid #387bdf37 */
+
+    padding: 8px;
+    transition: background-color 1.5s linear 0,5;
+}
+#now-then {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* border-bottom: 1px solid #387bdf37 */
+    border-left: 1px solid #387bdf37;
+
+    padding: 8px;
+    transition: background-color 1.5s linear 0,5;
+}
+#Fisma:hover, #now-then:hover {
+    background-color: #f7b04c2f;
 }
 .thesis-block img {
     height: auto;
     width: 35%;
     margin: 1rem;
+    border-radius: 8px;
 }
 .thesis-block .text {
     padding: 0 0.5rem;
+    color: #35374B;
 }
 footer {
     display: flex;
